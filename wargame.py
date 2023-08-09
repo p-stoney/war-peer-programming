@@ -1,3 +1,5 @@
+import random
+
 class Player
     def __init__(self, name):
         # str representing the player's name
@@ -29,3 +31,12 @@ class Deck:
 
     def initialize(self):
         suits = ['Diamonds', 'Hearts', 'Spades', 'Clubs']
+            for suit in suits:
+                for value in range(2, 15):
+                    self.cards.append(Card(value, suit))
+            random.shuffle(self.cards)
+
+    def split(self):
+        # split the deck and return two halves as separate lists
+        half_deck = len(self.cards) // 2
+        return self.cards[:half_deck], self.cards[half_deck:]
