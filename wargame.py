@@ -19,6 +19,13 @@ class Player
 
 class Card:
     def __init__(self, value, suit):
-        
+        self.value = value
+        self.suit = suit
 
 class Deck:
+    def __init__(self):
+        self.cards = []
+        self.initialize()
+
+    def initialize(self):
+        suits = ['Diamonds', 'Hearts', 'Spades', 'Clubs']
