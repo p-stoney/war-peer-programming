@@ -16,3 +16,9 @@ class Player
     def has_cards(self):
         # returns True if the player has any remaining cards, false otherwise
         ...
+
+class Card:
+    def __init__(self, value, suit):
+        
+
+class Deck:
