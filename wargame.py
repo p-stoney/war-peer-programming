@@ -1,6 +1,6 @@
 import random
 
-class Player
+class Player:
     def __init__(self, name):
         # str representing the player's name
         self.name = name
@@ -11,7 +11,7 @@ class Player
         # removes + returns top card from the player's hand, if no cards returns None
         ...
 
-    def take_card(self, cards)
+    def take_card(self, cards):
         # adds one(/more) won cards to the bottom of the player's hand
         ...
 
@@ -31,10 +31,10 @@ class Deck:
 
     def initialize(self):
         suits = ['Diamonds', 'Hearts', 'Spades', 'Clubs']
-            for suit in suits:
+        for suit in suits:
                 for value in range(2, 15):
                     self.cards.append(Card(value, suit))
-            random.shuffle(self.cards)
+        random.shuffle(self.cards)
 
     def split(self):
         # split the deck and return two halves as separate lists
