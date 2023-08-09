@@ -6,7 +6,7 @@ class Player
         self.hand = []
 
     def draw_card(self):
-        # removes or returns top card from the player's hand
+        # removes + returns top card from the player's hand, if no cards returns None
         ...
 
     def take_card(self, cards)
@@ -14,5 +14,5 @@ class Player
         ...
 
     def has_cards(self):
-        # returns true if the player has any remaining cards, false otherwise
+        # returns True if the player has any remaining cards, false otherwise
         ...
